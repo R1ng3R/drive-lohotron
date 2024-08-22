@@ -2,12 +2,16 @@ import cv2
 import numpy as np
 
 # Load the images
-img1 = cv2.imread('image1.jpg')
-img2 = cv2.imread('image2.jpg')
+img1 = cv2.imread('1.png')
+img2 = cv2.imread('2.png')
 
 # Resize the images to the same resolution
-img1 = cv2.resize(img1, (640, 480))
-img2 = cv2.resize(img2, (640, 480))
+img1 = cv2.resize(img1, (920, 640))
+img2 = cv2.resize(img2, (920, 200))
+
+cv2.imshow("Difference", img2)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
 
 # Convert the images to grayscale
 gray1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
