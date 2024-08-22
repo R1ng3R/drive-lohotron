@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 
+
 def compare_images(img1, img2):
     # Convert images to grayscale
     gray1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
