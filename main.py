@@ -1,7 +1,13 @@
 import cv2
 import numpy as np
 import tensorflow as tf
+import json
 
+
+with open('data/BoardsCorrect.json', 'r') as file:
+    data = json.load(file)
+
+print(data)
 
 def match_template(reference_image_path, camera_image_path):
     # Загрузка эталонного изображения и изображения с камеры
@@ -28,8 +34,8 @@ def match_template(reference_image_path, camera_image_path):
 
 
 # Пути к изображениям
-reference_image_path = 'path_to_reference_image.jpg'
-camera_image_path = 'path_to_camera_image.jpg'
+reference_image_path = '1.png'
+camera_image_path = '2.png'
 
 # Вызов функции
 match_template(reference_image_path, camera_image_path)

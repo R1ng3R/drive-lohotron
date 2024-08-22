@@ -1,6 +1,19 @@
 import cv2
 import numpy as np
+from PIL import Image
+import matplotlib.pyplot as plt
 
+image1 = Image.open('1.png').convert("L")
+image2 = Image.open('2.png').convert("L")
+
+image1.show()
+image2.show()
+
+plt.imshow(image2, cmap='gray', vmin=0, vmax=255)
+plt.show()
+
+plt.imshow(image1, cmap='gray', vmin=0, vmax=255)
+plt.show()
 
 def compare_images(img1, img2):
     # Convert images to grayscale
@@ -30,8 +43,8 @@ def compare_images(img1, img2):
     cv2.destroyAllWindows()
 
 # Load the two images
-img1 = cv2.imread("image1.jpg")
-img2 = cv2.imread("image2.jpg")
+img1 = cv2.imread("1.png")
+img2 = cv2.imread("2.png")
 
 # Compare the two images
 compare_images(img1, img2)
