@@ -14,3 +14,8 @@ img[dst > 0.01 * dst.max()] = [0, 0, 255]# тута диапозон порог�
 cv2.imshow('dst', img)
 if cv2.waitKey(0) & 0xff == 27:
     cv2.destroyAllWindows()
+
+это для меня
+def display(img, mapp='gray'):
+    plt.imshow(img, cmap=mapp)
+    plt.show()
