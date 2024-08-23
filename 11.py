@@ -1,5 +1,5 @@
 import logging
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+from telegram.ext import Updater, CommandHandler, MessageHandler, filters
 import cv2
 import numpy as np
 
@@ -59,7 +59,7 @@ def main():
     dp = updater.dispatcher
 
     dp.add_handler(CommandHandler('start', start))
-    dp.add_handler(MessageHandler(Filters.photo, compare_images))
+    dp.add_handler(MessageHandler(filters.photo, compare_images))
 
     updater.start_polling()
     updater.idle()
