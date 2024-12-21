@@ -10,10 +10,10 @@ a = input()
 
 def get_fish_xn_yn(source_x, source_y, radius, distortion):
     """
-    Get normalized x, y pixel coordinates from the original image and return normalized 
-    x, y pixel coordinates in the destination fished image.
-    :param distortion: Amount in which to move pixels from/to center.
-    As distortion grows, pixels will be moved further from the center, and vice versa.
+    Получаем нормализованные пиксельные координаты x, y из исходного изображения и возвращаем нормализованные
+    пиксельные координаты x, y в целевом полученном изображении.
+    :параметр distortion (искажение): величина, на которую нужно перемещать пиксели от центра к центру.
+    По мере увеличения искажения пиксели будут удаляться от центра, и наоборот.
     """
 
     if 1 - distortion*(radius**10) == 0:
@@ -24,9 +24,9 @@ def get_fish_xn_yn(source_x, source_y, radius, distortion):
 
 def fish(img, distortion_coefficient):
     """
-    :type img: numpy.ndarray
-    :param distortion_coefficient: The amount of distortion to apply.
-    :return: numpy.ndarray - the image with applied effect.
+    :введите img: numpy.ndarray
+    :параметр distortion_coefficient: Величина применяемого искажения.
+    :return: numpy.ndarray - изображение с примененным эффектом.
     """
 
     # If input image is only BW or RGB convert it to RGBA
